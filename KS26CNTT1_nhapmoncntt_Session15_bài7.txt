@@ -1,0 +1,42 @@
+Bài 7: Giải cứu dữ liệu nhóm CampusPay
+Phần 1: Phân tích vấn đề
+1. Bảng đánh giá rủi ro
+
+Hạng mục	Rủi ro	Nguyên nhân	Xếp loại
+
+Business Plan	cao    Chỉ lưu trên laptop trưởng nhóm, không có bản sao	Công nghệ
+Mã nguồn HTML/CSS	Cao	Chỉ lưu trên USB, dễ hỏng hoặc thất lạc	Công nghệ
+Database test user	Cao	Lưu trên laptop thành viên B, dữ liệu đã cũ	Tổ chức
+Slide Pitch	Trung bình	Lưu trên Zalo, không biết bản nào mới nhất	Tổ chức
+Tài liệu SRS	Cao	Gửi qua email nhiều lần, khó xác định bản chính xác	Tổ chức
+
+2. Hiện tượng 23 phiên bản file
+Đây là tình trạng xung đột phiên bản (Version Conflict). Các thành viên sửa file riêng rồi gửi qua lại bằng Zalo và email nên tạo ra nhiều bản khác nhau.
+
+Hậu quả là nhóm dễ dùng nhầm bản cũ, mất nội dung đã sửa, mất thời gian đối chiếu và ảnh hưởng đến tiến độ dự án.
+Phần 2: Sửa lỗi và nghiệm thu
+3. Quy trình Hybrid Workflow
+Bước 1: Lưu tài liệu và mã nguồn trong thư mục CampusPay trên máy tính để làm việc nhanh.
+
+Bước 2: Cài Google Drive for desktop hoặc OneDrive, bật đồng bộ thư mục CampusPay lên Cloud.
+
+Bước 3: Cả nhóm dùng chung thư mục Cloud, bật Version History để khôi phục file khi cần và dùng Files On-Demand để tiết kiệm dung lượng ổ cứng.
+
+Sơ đồ đồng bộ:
+Máy tính Local
+      ↓
+   Nhấn Ctrl + S
+      ↓
+Auto Sync (Google Drive/OneDrive)
+      ↓
+Cloud Storage
+      ↓
+Lưu trữ và khôi phục phiên bản
+
+
+- Nên đồng bộ: Business Plan, mã nguồn, SRS, test case và slide thuyết trình.
+- Không nên đồng bộ: Thư mục game, phim, file tạm và các dữ liệu không liên quan đến dự án.
+4. Khi máy tính chưa đồng bộ xong
+- Biểu tượng: Thường là hai mũi tên xoay hoặc trạng thái đang đồng bộ.
+- Nếu tắt máy ngay: File vẫn có thể còn trên máy nhưng bản Cloud chưa cập nhật, nên nhóm có thể chỉ thấy bản cũ.
+- Cách xử lý: Chờ biểu tượng chuyển sang dấu tích xanh hoặc trạng thái đã đồng bộ thành công, kiểm tra kết nối mạng rồi mới tắt máy.
